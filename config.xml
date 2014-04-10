@@ -40,7 +40,7 @@
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 
     <!-- Define app icon for each platform. -->
-	<icon src="images/icon.png" width="96" height="96"/>
+	<icon src="images/logo.png" width="96" height="96"/>
 <!--
 	<feature name="InAppBrowser">
     <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
