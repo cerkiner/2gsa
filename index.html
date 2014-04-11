@@ -38,6 +38,22 @@
 		border:none;
 	}
 	</style>
+	<script>
+		var d = new Date();
+	
+	$( document ).ready(function() {
+		$("#program").css("background-image",'url(images/program_'+d.getDate()+'.png)');
+		myTimer();
+	});
+	
+	var myVar=setInterval(function(){myTimer()},60000);
+
+	function myTimer()
+	{
+	var t=((d.getHours()-7)*28)-252;
+	$("#timer").css("margin-top",t);
+	}
+	</script>
 	</head> 
 
 <body>
@@ -52,7 +68,9 @@
 	</div><!-- /header -->
 	
 	<div role="main" class="ui-content">
-	
+		<div id="program" style="background-image:url(images/blank.png);position:relative;left:50%;width:252px;height:252px;top:0;margin-left:-126px;">
+		<img id="timer" src="images/timer.png" style="width:252px;height:252px;opacity:0.1;">
+		</div>
 	</div><!-- /content -->
 
   <div data-role="footer" data-theme="a">
