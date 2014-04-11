@@ -57,7 +57,7 @@
 	function myTimer()
 	{
 		$("#program").css("background-image",'url("images/program-'+d.getDate()+'.png")');
-	var t=((d.getHours()-7)*28)-252;
+	var t=(((d.getHours()-7)*28)%252)-252;
 	$("#timer").css("margin-top",t);
 	}
 	</script>
