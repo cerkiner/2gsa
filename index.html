@@ -57,7 +57,7 @@
 	function myTimer()
 	{
 		$("#program").css("background-image",'url("images/program-'+d.getDate()+'.png")');
-	var t=(((d.getHours()-7)*28)%252)-252;
+	var t=((d.getHours()-7)*28)-452;
 	$("#timer").css("margin-top",t);
 	}
 	</script>
@@ -75,8 +75,8 @@
 	</div><!-- /header -->
 	
 	<div role="main" class="ui-content">
-		<div id="program" style="background-image:url(images/blank.png);position:relative;left:50%;width:252px;height:252px;top:0;margin-left:-126px;">
-		<img id="timer" src="images/timer.png" style="width:252px;height:252px;opacity:0.15;">
+		<div id="program" style="background-image:url(images/blank.png);position:relative;left:50%;width:252px;height:252px;top:0;margin-left:-126px;overflow:hidden;">
+		<img id="timer" src="images/timer.png" style="width:252px;height:452px;opacity:0.15;">
 		</div>
 		<a role="button" data-rel="dialog" data-transition="flip" href="#2gsa" class="ui-btn ui-btn-b">2GŞA Hakkında</a>
 		<a role="button" data-rel="dialog" data-transition="flip" href="#sponsor" class="ui-btn ui-btn-b">Sponsorlarımız</a>
