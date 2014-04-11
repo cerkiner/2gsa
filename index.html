@@ -56,10 +56,21 @@
 
 	function myTimer()
 	{
-		$("#program").css("background-image",'url("images/program-'+d.getDate()+'.png")');
+	if(ImageExist("images/program-'+d.getDate()+'-'+d.getMonth()+'-'+d.getFullYear()+'.png") ){
+		$("#program").css("background-image",'url("images/program-'+d.getDate()+'-'+d.getMonth()+'-'+d.getFullYear()+'.png")');
+		}
+	if(ImageExist("images/timer-'+d.getDate()+'-'+d.getMonth()+'-'+d.getFullYear()+'.png") ){
+		$("#timer").attr('src','images/timer-'+d.getDate()+'-'+d.getMonth()+'-'+d.getFullYear()+'.png');
+		}
 	var t=((d.getHours()-7)*28)-452;
 	$("#timer").css("margin-top",t);
 	}
+	function ImageExist(url) 
+{
+   var img = new Image();
+   img.src = url;
+   return img.height != 0;
+}
 	</script>
 	</head> 
 
