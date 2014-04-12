@@ -46,14 +46,10 @@
 	}
 	</style>
 	<script>
-var d = new Date();
-if(d.getFullYear()==2014 && d.getMonth()==4){
+		var d = new Date();
+	
 	$( document ).ready(function() {
-	if(d.getDate()== 12 || d.getDate()== 13 ){
 		$("#program").css("background-image",'url("images/program-'+d.getDate()+'.png")');
-		} else {
-		$("#program").css("background-image",'url("images/program-12.png")');
-		}
 		myTimer();
 	});
 	
@@ -61,14 +57,9 @@ if(d.getFullYear()==2014 && d.getMonth()==4){
 
 	function myTimer()
 	{
-	if(d.getHours() >= 10 || d.getHours() <= 19){
 	var t=((d.getHours()-7)*28)-252;
 	$("#timer").css("margin-top",t);
-	} else {
-	$("#timer").css("margin-top",-252);
 	}
-	}
-}
 	</script>
 	</head> 
 
